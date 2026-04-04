@@ -333,3 +333,28 @@ h1 span {
   gap: 2rem; /* Maintain spacing between the logo and menu */
   padding-top: 1rem; /* Add some padding at the top */
 }
+
+/* Top navigation bar styling */
+.nav.topbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+.nav.topbar .nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav.topbar .nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
