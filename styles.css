@@ -41,6 +41,11 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 0;
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  z-index: 1000;
+  box-shadow: var(--shadow);
 }
 
 .brand {
@@ -133,6 +138,26 @@ h1 span {
   background: white;
   color: var(--primary-dark);
   border: 1px solid var(--border);
+}
+
+/* Ensure GitHub button matches btn-primary style but with black theme */
+.btn.github {
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn.github:hover {
+  background-color: #333;
+  color: #fff;
 }
 
 .hero-card,
@@ -260,4 +285,51 @@ h1 span {
   .btn {
     width: 100%;
   }
+}
+
+/* Sidebar navigation styling */
+.nav.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.nav.sidebar .brand {
+  margin-bottom: 1rem; /* Ensure spacing below the logo */
+}
+
+.nav.sidebar .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.nav.sidebar .nav-links a {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav.sidebar .nav-links a:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* Position the logo at the top of the sidebar */
+.nav.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the top */
+  gap: 2rem; /* Maintain spacing between the logo and menu */
+  padding-top: 1rem; /* Add some padding at the top */
 }
